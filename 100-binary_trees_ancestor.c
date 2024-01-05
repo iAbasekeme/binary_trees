@@ -42,7 +42,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 
 	while (ancestor != NULL)
 	{
-		if (is_descendant(ancestor, second))
+		if (is_descendant(ancestor, second) || ancestor == second)
 			return (ancestor);
 		ancestor = ancestor->parent;
 	}
